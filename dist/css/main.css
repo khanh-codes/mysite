@@ -172,6 +172,9 @@
       height: 0;
       overflow: hidden;
       visibility: hidden; }
+      .projects .square .view a,
+      .projects .square .git a {
+        font-size: 1vmax; }
     .projects .square .view {
       border-radius: 25px 0 0 25px;
       bottom: 0;
