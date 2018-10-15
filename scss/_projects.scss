@@ -1,17 +1,169 @@
 // Work/Projects
+#work {
+  .sm-heading {
+    margin-bottom: 0.5rem;
+  }
+}
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
+  grid-gap: 2%;
   grid-template-columns: repeat(3, 1fr);
+  //border: red 1px solid;
+  justify-items: stretch;
 
-  img {
+  .square {
+    display: grid;
     width: 100%;
-    border: #fff 3px solid;
+    height: 20vmax;
+    align-items: center;
+    justify-items: center;
+    background: darken($secondary-color, 2);
+    opacity: 0.8;
+    margin-bottom: 1vh;
+    padding: 0.4rem;
+    border-radius: 25px;
+    position: relative;
 
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
+    .view,
+    .git {
+      //border: white 1px solid;
+      position: absolute;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      width: 50%;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
+    .view {
+      border-radius: 25px 0 0 25px;
+      bottom: 0;
+      left: 0;
+      background: $secondary-color;
+      transform: translate3d(0, 100%, 0);
       @include easeOut;
+    }
+
+    .git {
+      border-radius: 0 25px 25px 0;
+      top: 0;
+      right: 0;
+      background: darken($primary-color, 5);
+      transform: translate3d(0, -100%, 0);
+      @include easeOut;
+    }
+
+    &:hover .view {
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      height: 100%;
+    }
+
+    &:hover .git {
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      height: 100%;
+    }
+
+    .git-only {
+      //border: white 1px solid;
+      border-radius: 25px;
+      top: 0;
+      position: absolute;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      background: darken($primary-color, 5);
+      transform: translate3d(0, -100%, 0);
+      @include easeOut;
+    }
+
+    &:hover .git-only {
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      height: 100%;
+    }
+
+    // &:hover {
+    //   opacity: 0.5;
+    //   border-color: $secondary-color;
+    //   @include easeOut;
+    // }
+
+    .content {
+      text-align: center;
+      font-size: 2.5vmax;
+      overflow: hidden;
+      p {
+        margin: 0;
+        padding: 0;
+        //border: red 1px solid;
+      }
+    }
+    &#mysite {
+      background: linear-gradient(
+          rgba(66, 134, 244, 0.75),
+          rgba(66, 134, 244, 0.75)
+        ),
+        url('../img/mysite.jpg');
+      background-position: left center;
+      background-size: 200%;
+    }
+
+    &#expensify {
+      background: linear-gradient(
+          rgba(66, 134, 244, 0.75),
+          rgba(66, 134, 244, 0.75)
+        ),
+        url('../img/expensify.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &#indecision {
+      background: linear-gradient(
+          rgba(66, 134, 244, 0.75),
+          rgba(66, 134, 244, 0.75)
+        ),
+        url('../img/indecision.jpg');
+      background-position: 25% 20%;
+      background-size: 200%;
+    }
+
+    &#lgbtq {
+      background: linear-gradient(
+          rgba(66, 134, 244, 0.75),
+          rgba(66, 134, 244, 0.75)
+        ),
+        url('../img/lgbtq.jpg');
+      background-position: center;
+      background-size: 125%;
+    }
+
+    &#jeopardy {
+      background: linear-gradient(
+          rgba(66, 134, 244, 0.75),
+          rgba(66, 134, 244, 0.75)
+        ),
+        url('../img/jeopardy.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    &#charlottesville {
+      background: linear-gradient(
+          rgba(66, 134, 244, 0.75),
+          rgba(66, 134, 244, 0.75)
+        ),
+        url('../img/charlottesville.jpg');
+      background-position: center;
+      background-size: cover;
     }
   }
 }

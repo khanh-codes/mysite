@@ -60,7 +60,10 @@
       Contact <span class="text-secondary">Me</span>
     </h1>
     <div class="form-container">
-      <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form name="contact" method="post" netlify-honeypot="bot-field" netlify>
+        <div class="hidden">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </div>
         <div>
           <label>Name</label>
           <input name="name" placeholder="John Doe" type="text" required />

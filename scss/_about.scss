@@ -2,12 +2,18 @@
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
+    'bioimage bio catimage'
+    'box1 box2 box3';
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
     grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+  .cat-image {
+    grid-area: catimage;
     margin: auto;
     border-radius: 50%;
     border: $secondary-color 3px solid;
@@ -25,22 +31,37 @@
     p {
       margin: 0;
       padding: 0;
+      font-weight: 300;
+      font-size: 1.2rem;
     }
   }
 
   .education-box {
-    grid-area: job1;
+    grid-area: box1;
+    width: 100%;
+  }
+  .current-role-box {
+    grid-area: box2;
   }
   .hobbies-box {
-    grid-area: job2;
-  }
-  .current-roles-box {
-    grid-area: job3;
+    grid-area: box3;
   }
 
   .box {
     background: lighten($primary-color, 5);
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border-bottom: $secondary-color 5px solid;
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    h4 {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+    }
   }
 }

@@ -1,0 +1,12 @@
+#resume {
+  .link {
+    color: $secondary-color;
+    font-weight: bold;
+  }
+
+  .resume-content {
+    embed {
+      overflow: hidden;
+    }
+  }
+}
