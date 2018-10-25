@@ -292,8 +292,12 @@
   color: #4286f4;
   font-weight: bold; }
 
-#resume .resume-content embed {
-  overflow: hidden; }
+#resume .resume-content {
+  text-align: center; }
+  #resume .resume-content embed {
+    width: 75%;
+    height: 1070px;
+    overflow: hidden; }
 
 * {
   box-sizing: border-box; }
